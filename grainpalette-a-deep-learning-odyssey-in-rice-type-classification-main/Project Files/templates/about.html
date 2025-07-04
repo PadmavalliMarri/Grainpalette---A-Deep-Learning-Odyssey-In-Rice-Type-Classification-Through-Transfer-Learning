@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - GrainPalette</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌾 GrainPalette</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-link active">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="about-section">
+            <div class="container">
+                <div class="about-header">
+                    <h1>About GrainPalette</h1>
+                    <p class="about-subtitle">A Deep Learning Odyssey in Rice Type Classification</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-card">
+                        <h2>🎯 Project Overview</h2>
+                        <p>GrainPalette is a deep learning-based web application that classifies images of rice grains into one of five types: <strong>Arborio, Basmati, Ipsala, Jasmine, and Karacadag</strong>. It uses a Convolutional Neural Network (CNN) with transfer learning from MobileNetV2 to perform accurate rice type predictions.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>🔬 Technology Stack</h2>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <strong>Deep Learning:</strong> TensorFlow, Keras
+                            </div>
+                            <div class="tech-item">
+                                <strong>Model:</strong> CNN with MobileNetV2 Transfer Learning
+                            </div>
+                            <div class="tech-item">
+                                <strong>Backend:</strong> Flask, Python
+                            </div>
+                            <div class="tech-item">
+                                <strong>Frontend:</strong> HTML, CSS, JavaScript
+                            </div>
+                            <div class="tech-item">
+                                <strong>Image Processing:</strong> PIL, NumPy
+                            </div>
+                            <div class="tech-item">
+                                <strong>Data:</strong> Kaggle Rice Image Dataset
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>🌾 Rice Types</h2>
+                        <div class="rice-info-grid">
+                            <div class="rice-info-item">
+                                <h3>Arborio</h3>
+                                <p>Short-grain rice from Italy, perfect for risotto with its creamy texture.</p>
+                            </div>
+                            <div class="rice-info-item">
+                                <h3>Basmati</h3>
+                                <p>Long-grain aromatic rice from India and Pakistan, known for its fragrance.</p>
+                            </div>
+                            <div class="rice-info-item">
+                                <h3>Ipsala</h3>
+                                <p>Turkish rice variety with medium grains, commonly used in Turkish cuisine.</p>
+                            </div>
+                            <div class="rice-info-item">
+                                <h3>Jasmine</h3>
+                                <p>Fragrant long-grain rice from Thailand, slightly sticky when cooked.</p>
+                            </div>
+                            <div class="rice-info-item">
+                                <h3>Karacadag</h3>
+                                <p>Turkish rice variety grown in the Karacadag region, known for quality.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>🚀 How It Works</h2>
+                        <div class="process-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Image Upload</h3>
+                                    <p>Users upload rice grain images through the web interface</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Preprocessing</h3>
+                                    <p>Images are resized to 224x224 pixels and normalized for the model</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>CNN Analysis</h3>
+                                    <p>MobileNetV2-based model analyzes grain characteristics</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h3>Classification</h3>
+                                    <p>Model outputs predictions with confidence scores for each rice type</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>💡 Use Cases</h2>
+                        <ul class="use-cases-list">
+                            <li><strong>Farmers:</strong> Identify seed types before cultivation</li>
+                            <li><strong>Agricultural Scientists:</strong> Validate crop classification in the field</li>
+                            <li><strong>Educators:</strong> Teaching tool for agricultural studies</li>
+                            <li><strong>Home Gardeners:</strong> Learn about rice biodiversity</li>
+                            <li><strong>Food Industry:</strong> Quality control and grain sorting</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>📊 Model Performance</h2>
+                        <p>Our CNN model with MobileNetV2 transfer learning achieves high accuracy in rice type classification. The model was trained on thousands of rice grain images and validated using rigorous testing procedures.</p>
+                        <div class="performance-features">
+                            <div class="feature">✅ Transfer Learning from ImageNet</div>
+                            <div class="feature">✅ Data Augmentation for Robustness</div>
+                            <div class="feature">✅ Real-time Prediction</div>
+                            <div class="feature">✅ Confidence Score Analysis</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to Try?</h2>
+                    <p>Upload your rice grain images and see the AI in action!</p>
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">Start Classifying</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GrainPalette. Deep Learning Rice Classification Project.</p>
+        </div>
+    </footer>
+</body>
+</html>
